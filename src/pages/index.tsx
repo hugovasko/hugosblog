@@ -86,7 +86,7 @@ const Home: NextPage = () => {
             {!!user.isSignedIn && <CreatePostWizard />}
           </div>
           <div>
-            {data?.map((fullPost) => (
+            {data?.map((fullPost: PostWithUser) => (
               <PostView {...fullPost} key={fullPost.post.id} />
             ))}
           </div>
